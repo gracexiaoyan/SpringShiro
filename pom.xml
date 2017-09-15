@@ -8,10 +8,16 @@
     <artifactId>SpringShiro</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.6.RELEASE</version>
+    </parent>
+
     <properties>
         <shiro.version>1.4.0</shiro.version>
         <!-- These spring-boot modules require spring 4 -->
-        <spring.version>4.3.2.RELEASE</spring.version>
+        <spring.version>4.3.3.RELEASE</spring.version>
         <spring-boot.version>1.5.6.RELEASE</spring-boot.version>
     </properties>
 
@@ -26,25 +32,26 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
-            <version>${spring-boot.version}</version>
+            <!--<version>${spring-boot.version}</version>-->
         </dependency>
 
         <!-- Spring -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure</artifactId>
-            <version>${spring-boot.version}</version>
+            <!--<version>${spring-boot.version}</version>-->
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
-            <version>${spring-boot.version}</version>
+            <!--<version>${spring-boot.version}</version>-->
             <optional>true</optional>
         </dependency>
+
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-jdbc</artifactId>
-            <version>${spring.version}</version>
+            <!--<version>${spring.version}</version>-->
             <optional>true</optional>
             <exclusions>
                 <exclusion>
@@ -61,5 +68,15 @@
             <version>5.1.40</version>
         </dependency>
     </dependencies>
-    
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <!--<version>${spring-boot.version}</version>-->
+            </plugin>
+        </plugins>
+    </build>
+
 </project>
